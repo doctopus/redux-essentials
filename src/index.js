@@ -5,9 +5,13 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import {boostrapDataAction} from "./actions/bootstrap.action";
 
 const container = document.getElementById('root');
 const root = createRoot(container);
+
+
+store.dispatch(boostrapDataAction())
 
 root.render(
   <React.StrictMode>
