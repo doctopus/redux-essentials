@@ -1,6 +1,8 @@
-import {SET_TODOS, SET_USERS, SET_USERS_LOADING} from "../app/action_types";
+import {SET_USERS, SET_USERS_LOADING, SET_TODOS, SET_POSTS, SET_QUOTES } from "../app/action_types";
 import {fetchUsers} from "../services/users.service";
 import {fetchTodos} from "../services/todos.service";
+import {fetchPosts} from "../services/posts.service";
+import {fetchQuotes} from "../services/quotes.service";
 
 const boostrapDataAction = () => {
     return async (dispatch) => {
@@ -11,6 +13,12 @@ const boostrapDataAction = () => {
 
         const todos = await fetchTodos();
         dispatch({ type: SET_TODOS, data: todos })
+
+        const posts = await fetchPosts();
+        dispatch({ type: SET_POSTS, data: posts })
+
+        const quotes = await fetchQuotes();
+        dispatch({type: SET_QUOTES, data: quotes})
     }
 }
 

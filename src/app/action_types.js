@@ -4,11 +4,16 @@ const REMOVE_USERS = 'REMOVE_USERS';
 const SET_THEME = 'SET_THEME';
 
 const SET_TODOS = 'SET_TODOS';
+const SET_POSTS = 'SET_POSTS';
+
+const SET_QUOTES ='SET_QUOTES';
 
 export {
-    SET_THEME,
-    SET_TODOS,
     SET_USERS,
     SET_USERS_LOADING,
-    REMOVE_USERS
+    REMOVE_USERS,
+    SET_THEME,
+    SET_TODOS,
+    SET_POSTS,
+    SET_QUOTES
 };
